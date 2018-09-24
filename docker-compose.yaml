@@ -1,0 +1,11 @@
+version: '2'
+services:
+  thumbor:
+    build: './'
+    ports:
+      - '8000:8000'
+    environment:
+      - HTTP_LOADER_URL_PREFIX='www.example.com'
+      - LOADER=thumbor.loaders.http_loader_file_fallback
+    volumes:
+        - './tests/fixtures/images/:/data/loader/'
