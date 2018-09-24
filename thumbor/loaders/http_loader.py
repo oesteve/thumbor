@@ -142,6 +142,9 @@ def load_sync(context, url, callback, normalize_url_func):
     if user_agent is None and 'User-Agent' not in headers:
         user_agent = context.config.HTTP_LOADER_DEFAULT_USER_AGENT
 
+    if context.config.HTTP_LOADER_URL_PREFIX:
+        url = context.config.HTTP_LOADER_URL_PREFIX+'/'+url
+
     url = normalize_url_func(url)
     req = tornado.httpclient.HTTPRequest(
         url=url,

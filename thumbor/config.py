@@ -221,6 +221,9 @@ Config.define(
     'If HTTP_LOADER_CURL_LOW_SPEED_TIME and HTTP_LOADER_CURL_ASYNC_HTTP_CLIENT ' +
     'are set, then this is the limit in bytes per second as integer which should ' +
     'timeout if the speed is below that limit for HTTP_LOADER_CURL_LOW_SPEED_TIME seconds')
+Config.define(
+    'HTTP_LOADER_URL_PREFIX', None,
+    'Prefix for url request, concat the value before the query url')
 
 # FILE STORAGE GENERIC OPTIONS
 Config.define(
