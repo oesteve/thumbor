@@ -3,6 +3,7 @@ python-numpy
 python-opencv
 libopencv-dev
 libjpeg-dev
+libjpeg-progs
 libpng-dev
 libx264-dev
 libass-dev
